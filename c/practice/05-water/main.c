@@ -10,8 +10,6 @@
 
 
 float water(float x){
-    
-
     float wat;
     if (x<=15) {
         wat=x*4/3;
@@ -19,8 +17,6 @@ float water(float x){
         wat=2.5*x-10.5;
     }
     return wat;
-    
-    
 }
 
 
