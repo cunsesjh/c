@@ -6,17 +6,25 @@
 //  Copyright © 2020 edz. All rights reserved.
 //
 
+/*
+显示所输入的月份所处的季节
+*/
 #include <stdio.h>
-int main() {
-    int i,j;
-    for (i=0; i<=4; i++) {
-        for (j=0; j<i; j++) {
-            printf(" ");
+#include <math.h>
+int main(void)
+{
+    int num;
+    int i;
+    scanf("%d",&num);
+    for (i=2; i<=sqrt(num); i++) {
+        if (num%i == 0) {
+            break;;
         }
-        for (j=4-j; j>0; j--) {
-            printf("* ");
-        }
-        printf("\n");
+    }
+    if ((i<=sqrt(num))||(num==1)) {
+        printf("不是素数");
+    }else{
+        printf("是素数");
     }
     return 0;
 }
