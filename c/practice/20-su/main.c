@@ -11,12 +11,14 @@
 int main(int argc, const char * argv[]) {
     int i,m;
     scanf("%d",&m);
+    int isPrime=1;
     for (i=2; i<=m/2; i++) {
         if (m%i==0) {
+            isPrime=0;
             break;
         }
     }
-    if (i>m/2 && m!=1) {
+    if ((isPrime==1)&&(m!=1)) {
         printf("YES\n");
     }else{
         printf("NO\n");
